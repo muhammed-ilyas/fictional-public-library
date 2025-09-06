@@ -4,7 +4,6 @@ import com.aim.fictionalpubliclibrary.dtos.BookRequestDTO;
 import com.aim.fictionalpubliclibrary.dtos.BookResponseDTO;
 import com.aim.fictionalpubliclibrary.models.Book;
 import com.aim.fictionalpubliclibrary.services.BookService;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -24,7 +23,7 @@ public class BookController {
 
     private final BookService bookService;
 
-    public BookController(@Qualifier("bookDBService") BookService bookService) {
+    public BookController(BookService bookService) {
         this.bookService = bookService;
     }
 

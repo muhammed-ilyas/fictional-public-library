@@ -9,7 +9,7 @@ import org.springframework.util.CollectionUtils;
 
 import java.util.List;
 
-@Service("bookDBService")
+@Service
 public class BookDBService implements BookService {
 
     private final BookRepository bookRepository;
