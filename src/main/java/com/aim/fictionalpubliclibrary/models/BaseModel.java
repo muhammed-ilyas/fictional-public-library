@@ -13,6 +13,11 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.util.Date;
 
+/**
+ * BaseModel is a mapped superclass that provides common fields for all entities.
+ * It includes an auto-generated ID, creation timestamp, and last modified timestamp.
+ * The class is annotated with @EntityListeners to enable auditing features.
+ */
 @Getter
 @Setter
 @MappedSuperclass

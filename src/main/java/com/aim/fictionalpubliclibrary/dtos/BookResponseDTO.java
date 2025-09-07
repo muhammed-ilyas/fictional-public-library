@@ -4,6 +4,9 @@ import com.aim.fictionalpubliclibrary.models.Book;
 import lombok.Builder;
 import lombok.Data;
 
+/**
+ * Data Transfer Object for sending book details in responses.
+ */
 @Data
 @Builder
 public class BookResponseDTO {
@@ -14,6 +17,12 @@ public class BookResponseDTO {
     private int publishedYear;
     private String genre;
 
+    /**
+     * Converts a Book entity to a BookResponseDTO.
+     *
+     * @param book the Book entity to convert
+     * @return the corresponding BookResponseDTO
+     */
     public static BookResponseDTO fromBook(Book book) {
         if (book == null) {
             return null;

@@ -8,6 +8,7 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
+/** Data Transfer Object for Book requests. */
 @Data
 @Builder
 public class BookRequestDTO {
@@ -17,6 +18,11 @@ public class BookRequestDTO {
     private int publishedYear;
     private String genre;
 
+    /** Converts a BookRequestDTO to a Book entity.
+     *
+     * @param bookRequestDTO the BookRequestDTO to convert
+     * @return the corresponding Book entity
+     */
     public static Book toBook(BookRequestDTO bookRequestDTO) {
         Book book = new Book();
         book.setTitle(bookRequestDTO.getTitle());
@@ -26,6 +32,12 @@ public class BookRequestDTO {
         book.setGenre(bookRequestDTO.getGenre());
         return book;
     }
+
+    /** Validates the fields of a BookRequestDTO.
+     *
+     * @param bookRequestDTO the BookRequestDTO to validate
+     * @throws InvalidInputException if any required field is missing or invalid
+     */
     public static void validate(BookRequestDTO bookRequestDTO) {
         if (bookRequestDTO == null) {
             throw new InvalidInputException("BookRequestDTO cannot be null");

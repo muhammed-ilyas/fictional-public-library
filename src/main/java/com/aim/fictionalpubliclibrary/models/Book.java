@@ -4,6 +4,9 @@ import jakarta.persistence.Entity;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * Entity representing a Book in the library.
+ */
 @Getter
 @Setter
 @Entity

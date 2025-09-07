@@ -4,6 +4,9 @@ import com.aim.fictionalpubliclibrary.models.Book;
 
 import java.util.List;
 
+/**
+ * BookService interface defining methods for managing Book entities.
+ */
 public interface BookService {
 
     List<Book> getAllBooks();
